@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "latest",
     "@react-three/drei": "latest",
     "@react-three/fiber": "latest",
     "framer-motion": "latest",
