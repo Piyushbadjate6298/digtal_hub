@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #f8fbff;
+  background: #07111f;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+}
+
+@layer base {
+  body {
+    @apply bg-ink font-sans text-slate-100;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply min-h-screen bg-[radial-gradient(circle_at_15%_5%,rgba(34,211,238,.18),transparent_26%),radial-gradient(circle_at_85%_0%,rgba(124,58,237,.18),transparent_30%),#07111f];
+  }
+
+  .container-pad {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .glass {
+    @apply border border-white/10 bg-white/[0.07] shadow-panel backdrop-blur-2xl;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-cyan/70 focus:ring-offset-2 focus:ring-offset-ink;
+  }
+}
